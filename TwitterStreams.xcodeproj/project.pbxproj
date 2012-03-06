@@ -21,6 +21,7 @@
 		E07C43761505BF2C006279FA /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43731505BF2C006279FA /* JSONKit.m */; };
 		E07C437A1505BFA9006279FA /* TSUserStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43791505BFA9006279FA /* TSUserStream.m */; };
 		E07C43811505DA4F006279FA /* TSFilterStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43801505DA4F006279FA /* TSFilterStream.m */; };
+		E07C43831506016D006279FA /* README in Resources */ = {isa = PBXBuildFile; fileRef = E07C43821506016D006279FA /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		E07C43791505BFA9006279FA /* TSUserStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUserStream.m; sourceTree = "<group>"; };
 		E07C437F1505DA4F006279FA /* TSFilterStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSFilterStream.h; sourceTree = "<group>"; };
 		E07C43801505DA4F006279FA /* TSFilterStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSFilterStream.m; sourceTree = "<group>"; };
+		E07C43821506016D006279FA /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		E07C43271505BB3F006279FA = {
 			isa = PBXGroup;
 			children = (
+				E07C43821506016D006279FA /* README */,
 				E07C43531505BB6C006279FA /* ExampleApp */,
 				E07C435F1505BB6C006279FA /* TwitterStreams */,
 				E07C43351505BB3F006279FA /* Frameworks */,
@@ -211,6 +214,7 @@
 			files = (
 				E07C43611505BB6C006279FA /* InfoPlist.strings in Resources */,
 				E07C43621505BB6C006279FA /* ViewController.xib in Resources */,
+				E07C43831506016D006279FA /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
