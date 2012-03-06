@@ -20,6 +20,7 @@ static dispatch_queue_t operation_processing_queue() {
 + (void)parseJson:(id)json
           friends:(TSModelParserFriendsList)friends
             tweet:(TSModelParserTweet)tweet
+      deleteTweet:(TSModelParserTweet)deleteTweet
       unsupported:(TSModelParserUnsupported)unsupported {
     dispatch_async(operation_processing_queue(), ^(void) {
         if ([json isKindOfClass:[NSDictionary class]]) {
@@ -34,7 +35,13 @@ static dispatch_queue_t operation_processing_queue() {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     tweet(model);
                 });
-            }            
+            }    
+            else if ([json objectForKey:@"delete"]) {
+                TSTweet* model = [[[TSTweet alloc] initWithDictionary:[json objectForKey:@"status"]] autorelease];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    deleteTweet(model);
+                });
+            }   
             else {
                 // Unknown
                 dispatch_async(dispatch_get_main_queue(), ^{

@@ -173,7 +173,10 @@
                      } tweet:^(TSTweet *model) {
                          // Got a new tweet!
                          [self.tweets insertObject:model atIndex:0];
-                         [self.tableView reloadData];
+                         [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]]
+                                                                        withRowAnimation:UITableViewRowAnimationNone];
+                     } deleteTweet:^(TSTweet *model) {
+                         NSLog(@"Delete Tweet");
                      } unsupported:^(id json) {
                          NSLog(@"Unsupported : %@", json); 
                      }];

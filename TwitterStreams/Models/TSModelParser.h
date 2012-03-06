@@ -20,6 +20,7 @@ typedef void(^TSModelParserUnsupported)(id json);
 + (void)parseJson:(id)json
           friends:(TSModelParserFriendsList)friends
             tweet:(TSModelParserTweet)tweet
+      deleteTweet:(TSModelParserTweet)deleteTweet
       unsupported:(TSModelParserUnsupported)unsupported;
  
 @end
