@@ -22,6 +22,8 @@ static dispatch_queue_t operation_processing_queue() {
             tweet:(TSModelParserTweet)tweet
       deleteTweet:(TSModelParserTweet)deleteTweet
            follow:(TSModelParserFollow)follow
+         favorite:(TSModelParserFavorite)favorite
+       unfavorite:(TSModelParserFavorite)unfavorite
       unsupported:(TSModelParserUnsupported)unsupported {
     dispatch_async(operation_processing_queue(), ^(void) {
         if ([json isKindOfClass:[NSDictionary class]]) {
@@ -49,6 +51,18 @@ static dispatch_queue_t operation_processing_queue() {
                     follow(model);
                 });
             }  
+            else if ([json objectForKey:@"event"] && [[json objectForKey:@"event"] isEqualToString:@"favorite"]) {
+                TSFavorite* model = [[[TSFavorite alloc] initWithDictionary:json] autorelease];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    favorite(model);
+                });
+            }
+            else if ([json objectForKey:@"event"] && [[json objectForKey:@"event"] isEqualToString:@"unfavorite"]) {
+                TSFavorite* model = [[[TSFavorite alloc] initWithDictionary:json] autorelease];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    unfavorite(model);
+                });
+            }
             else {
                 // Unknown
                 dispatch_async(dispatch_get_main_queue(), ^{

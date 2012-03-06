@@ -179,6 +179,12 @@
                          NSLog(@"Delete Tweet");
                      } follow:^(TSFollow *model) {
                          NSLog(@"@%@ Followed @%@", model.source.screenName, model.target.screenName);
+                     } favorite:^(TSFavorite *model) {
+                         NSLog(@"@%@ favorited tweet by @%@", model.source.screenName, model.tweet.user.screenName);
+                         
+                     } unfavorite:^(TSFavorite *model) {
+                         NSLog(@"@%@ unfavorited tweet by @%@", model.source.screenName, model.tweet.user.screenName);
+                         
                      } unsupported:^(id json) {
                          NSLog(@"Unsupported : %@", json); 
                      }];
