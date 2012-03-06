@@ -1,0 +1,3 @@
+[submodule "TwitterStreams/Dependencies/JSONKit"]
+	path = TwitterStreams/Dependencies/JSONKit
+	url = git://github.com/johnezang/JSONKit.git

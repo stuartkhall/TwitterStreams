@@ -10,11 +10,17 @@
 		E07C43371505BB3F006279FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C43361505BB3F006279FA /* UIKit.framework */; };
 		E07C43391505BB3F006279FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C43381505BB3F006279FA /* Foundation.framework */; };
 		E07C433B1505BB3F006279FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C433A1505BB3F006279FA /* CoreGraphics.framework */; };
-		E07C43411505BB3F006279FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E07C433F1505BB3F006279FA /* InfoPlist.strings */; };
-		E07C43431505BB3F006279FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43421505BB3F006279FA /* main.m */; };
-		E07C43471505BB3F006279FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43461505BB3F006279FA /* AppDelegate.m */; };
-		E07C434A1505BB3F006279FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43491505BB3F006279FA /* ViewController.m */; };
-		E07C434D1505BB3F006279FA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07C434B1505BB3F006279FA /* ViewController.xib */; };
+		E07C43601505BB6C006279FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43551505BB6C006279FA /* AppDelegate.m */; };
+		E07C43611505BB6C006279FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E07C43561505BB6C006279FA /* InfoPlist.strings */; };
+		E07C43621505BB6C006279FA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07C43581505BB6C006279FA /* ViewController.xib */; };
+		E07C43631505BB6C006279FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C435A1505BB6C006279FA /* main.m */; };
+		E07C43651505BB6C006279FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C435E1505BB6C006279FA /* ViewController.m */; };
+		E07C436A1505BC12006279FA /* TSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43691505BC12006279FA /* TSStream.m */; };
+		E07C436C1505BC77006279FA /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C436B1505BC77006279FA /* Twitter.framework */; };
+		E07C436E1505BC7C006279FA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C436D1505BC7C006279FA /* Accounts.framework */; };
+		E07C43761505BF2C006279FA /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43731505BF2C006279FA /* JSONKit.m */; };
+		E07C437A1505BFA9006279FA /* TSUserStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43791505BFA9006279FA /* TSUserStream.m */; };
+		E07C43811505DA4F006279FA /* TSFilterStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C43801505DA4F006279FA /* TSFilterStream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +28,25 @@
 		E07C43361505BB3F006279FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E07C43381505BB3F006279FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E07C433A1505BB3F006279FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E07C433E1505BB3F006279FA /* TwitterStreams-Info.plist */ = {isa = PBXFileReference; path = "TwitterStreams-Info.plist"; sourceTree = "<group>"; };
-		E07C43401505BB3F006279FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E07C43421505BB3F006279FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E07C43441505BB3F006279FA /* TwitterStreams-Prefix.pch */ = {isa = PBXFileReference; path = "TwitterStreams-Prefix.pch"; sourceTree = "<group>"; };
-		E07C43451505BB3F006279FA /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
-		E07C43461505BB3F006279FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E07C43481505BB3F006279FA /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		E07C43491505BB3F006279FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E07C434C1505BB3F006279FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		E07C43541505BB6C006279FA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E07C43551505BB6C006279FA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E07C43571505BB6C006279FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E07C43591505BB6C006279FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		E07C435A1505BB6C006279FA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E07C435B1505BB6C006279FA /* TwitterStreams-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TwitterStreams-Info.plist"; sourceTree = "<group>"; };
+		E07C435C1505BB6C006279FA /* TwitterStreams-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TwitterStreams-Prefix.pch"; sourceTree = "<group>"; };
+		E07C435D1505BB6C006279FA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E07C435E1505BB6C006279FA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E07C43681505BC12006279FA /* TSStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSStream.h; sourceTree = "<group>"; };
+		E07C43691505BC12006279FA /* TSStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSStream.m; sourceTree = "<group>"; };
+		E07C436B1505BC77006279FA /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		E07C436D1505BC7C006279FA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		E07C43721505BF2C006279FA /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		E07C43731505BF2C006279FA /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		E07C43781505BFA9006279FA /* TSUserStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUserStream.h; sourceTree = "<group>"; };
+		E07C43791505BFA9006279FA /* TSUserStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUserStream.m; sourceTree = "<group>"; };
+		E07C437F1505DA4F006279FA /* TSFilterStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSFilterStream.h; sourceTree = "<group>"; };
+		E07C43801505DA4F006279FA /* TSFilterStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSFilterStream.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07C436E1505BC7C006279FA /* Accounts.framework in Frameworks */,
+				E07C436C1505BC77006279FA /* Twitter.framework in Frameworks */,
 				E07C43371505BB3F006279FA /* UIKit.framework in Frameworks */,
 				E07C43391505BB3F006279FA /* Foundation.framework in Frameworks */,
 				E07C433B1505BB3F006279FA /* CoreGraphics.framework in Frameworks */,
@@ -50,7 +68,8 @@
 		E07C43271505BB3F006279FA = {
 			isa = PBXGroup;
 			children = (
-				E07C433C1505BB3F006279FA /* TwitterStreams */,
+				E07C43531505BB6C006279FA /* ExampleApp */,
+				E07C435F1505BB6C006279FA /* TwitterStreams */,
 				E07C43351505BB3F006279FA /* Frameworks */,
 				E07C43331505BB3F006279FA /* Products */,
 			);
@@ -67,6 +86,8 @@
 		E07C43351505BB3F006279FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E07C436D1505BC7C006279FA /* Accounts.framework */,
+				E07C436B1505BC77006279FA /* Twitter.framework */,
 				E07C43361505BB3F006279FA /* UIKit.framework */,
 				E07C43381505BB3F006279FA /* Foundation.framework */,
 				E07C433A1505BB3F006279FA /* CoreGraphics.framework */,
@@ -74,28 +95,67 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E07C433C1505BB3F006279FA /* TwitterStreams */ = {
+		E07C43531505BB6C006279FA /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				E07C43451505BB3F006279FA /* AppDelegate.h */,
-				E07C43461505BB3F006279FA /* AppDelegate.m */,
-				E07C43481505BB3F006279FA /* ViewController.h */,
-				E07C43491505BB3F006279FA /* ViewController.m */,
-				E07C434B1505BB3F006279FA /* ViewController.xib */,
-				E07C433D1505BB3F006279FA /* Supporting Files */,
+				E07C43541505BB6C006279FA /* AppDelegate.h */,
+				E07C43551505BB6C006279FA /* AppDelegate.m */,
+				E07C43561505BB6C006279FA /* InfoPlist.strings */,
+				E07C43581505BB6C006279FA /* ViewController.xib */,
+				E07C435A1505BB6C006279FA /* main.m */,
+				E07C435B1505BB6C006279FA /* TwitterStreams-Info.plist */,
+				E07C435C1505BB6C006279FA /* TwitterStreams-Prefix.pch */,
+				E07C435D1505BB6C006279FA /* ViewController.h */,
+				E07C435E1505BB6C006279FA /* ViewController.m */,
+			);
+			path = ExampleApp;
+			sourceTree = "<group>";
+		};
+		E07C435F1505BB6C006279FA /* TwitterStreams */ = {
+			isa = PBXGroup;
+			children = (
+				E07C436F1505BE99006279FA /* Dependencies */,
+				E07C43661505BBD9006279FA /* Models */,
+				E07C43671505BBD9006279FA /* Streams */,
 			);
 			path = TwitterStreams;
 			sourceTree = "<group>";
 		};
-		E07C433D1505BB3F006279FA /* Supporting Files */ = {
+		E07C43661505BBD9006279FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E07C433E1505BB3F006279FA /* TwitterStreams-Info.plist */,
-				E07C433F1505BB3F006279FA /* InfoPlist.strings */,
-				E07C43421505BB3F006279FA /* main.m */,
-				E07C43441505BB3F006279FA /* TwitterStreams-Prefix.pch */,
 			);
-			name = "Supporting Files";
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E07C43671505BBD9006279FA /* Streams */ = {
+			isa = PBXGroup;
+			children = (
+				E07C43681505BC12006279FA /* TSStream.h */,
+				E07C43691505BC12006279FA /* TSStream.m */,
+				E07C43781505BFA9006279FA /* TSUserStream.h */,
+				E07C43791505BFA9006279FA /* TSUserStream.m */,
+				E07C437F1505DA4F006279FA /* TSFilterStream.h */,
+				E07C43801505DA4F006279FA /* TSFilterStream.m */,
+			);
+			path = Streams;
+			sourceTree = "<group>";
+		};
+		E07C436F1505BE99006279FA /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				E07C43701505BF2C006279FA /* JSONKit */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		E07C43701505BF2C006279FA /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				E07C43721505BF2C006279FA /* JSONKit.h */,
+				E07C43731505BF2C006279FA /* JSONKit.m */,
+			);
+			path = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +209,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E07C43411505BB3F006279FA /* InfoPlist.strings in Resources */,
-				E07C434D1505BB3F006279FA /* ViewController.xib in Resources */,
+				E07C43611505BB6C006279FA /* InfoPlist.strings in Resources */,
+				E07C43621505BB6C006279FA /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,27 +221,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E07C43431505BB3F006279FA /* main.m in Sources */,
-				E07C43471505BB3F006279FA /* AppDelegate.m in Sources */,
-				E07C434A1505BB3F006279FA /* ViewController.m in Sources */,
+				E07C43601505BB6C006279FA /* AppDelegate.m in Sources */,
+				E07C43631505BB6C006279FA /* main.m in Sources */,
+				E07C43651505BB6C006279FA /* ViewController.m in Sources */,
+				E07C436A1505BC12006279FA /* TSStream.m in Sources */,
+				E07C43761505BF2C006279FA /* JSONKit.m in Sources */,
+				E07C437A1505BFA9006279FA /* TSUserStream.m in Sources */,
+				E07C43811505DA4F006279FA /* TSFilterStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E07C433F1505BB3F006279FA /* InfoPlist.strings */ = {
+		E07C43561505BB6C006279FA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E07C43401505BB3F006279FA /* en */,
+				E07C43571505BB6C006279FA /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		E07C434B1505BB3F006279FA /* ViewController.xib */ = {
+		E07C43581505BB6C006279FA /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E07C434C1505BB3F006279FA /* en */,
+				E07C43591505BB6C006279FA /* en */,
 			);
 			name = ViewController.xib;
 			sourceTree = "<group>";
@@ -236,8 +300,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TwitterStreams/TwitterStreams-Prefix.pch";
-				INFOPLIST_FILE = "TwitterStreams/TwitterStreams-Info.plist";
+				GCC_PREFIX_HEADER = "ExampleApp/TwitterStreams-Prefix.pch";
+				INFOPLIST_FILE = "ExampleApp/TwitterStreams-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -247,8 +311,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TwitterStreams/TwitterStreams-Prefix.pch";
-				INFOPLIST_FILE = "TwitterStreams/TwitterStreams-Info.plist";
+				GCC_PREFIX_HEADER = "ExampleApp/TwitterStreams-Prefix.pch";
+				INFOPLIST_FILE = "ExampleApp/TwitterStreams-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

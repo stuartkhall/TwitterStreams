@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "TSUserStream.h"
+
+@interface ViewController : UIViewController<UIActionSheetDelegate, TSStreamDelegate>
 
 @end
