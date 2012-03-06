@@ -10,9 +10,11 @@
 
 #import "TSFriendsList.h"
 #import "TSTweet.h"
+#import "TSFollow.h"
 
 typedef void(^TSModelParserFriendsList)(TSFriendsList* model);
 typedef void(^TSModelParserTweet)(TSTweet* model);
+typedef void(^TSModelParserFollow)(TSFollow* model);
 typedef void(^TSModelParserUnsupported)(id json);
 
 @interface TSModelParser : NSObject
@@ -21,6 +23,7 @@ typedef void(^TSModelParserUnsupported)(id json);
           friends:(TSModelParserFriendsList)friends
             tweet:(TSModelParserTweet)tweet
       deleteTweet:(TSModelParserTweet)deleteTweet
+           follow:(TSModelParserFollow)follow
       unsupported:(TSModelParserUnsupported)unsupported;
  
 @end

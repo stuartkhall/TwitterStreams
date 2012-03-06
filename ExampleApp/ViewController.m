@@ -177,6 +177,8 @@
                                                                         withRowAnimation:UITableViewRowAnimationNone];
                      } deleteTweet:^(TSTweet *model) {
                          NSLog(@"Delete Tweet");
+                     } follow:^(TSFollow *model) {
+                         NSLog(@"@%@ Followed @%@", model.source.screenName, model.target.screenName);
                      } unsupported:^(id json) {
                          NSLog(@"Unsupported : %@", json); 
                      }];
