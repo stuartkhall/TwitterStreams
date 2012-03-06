@@ -11,6 +11,8 @@
 #import "TSUserStream.h"
 #import "TSFilterStream.h"
 
+#import "TSModelParser.h"
+
 #import <Accounts/Accounts.h>
 #import <Twitter/Twitter.h>
 
@@ -19,6 +21,7 @@
 @property (nonatomic, retain) ACAccountStore* accountStore;
 @property (nonatomic, retain) NSArray* accounts;
 @property (nonatomic, retain) ACAccount* account;
+@property (nonatomic, retain) NSMutableArray* tweets;
 
 @property (nonatomic, retain) TSStream* stream;
 
@@ -26,6 +29,9 @@
 
 @implementation ViewController
 
+@synthesize tableView=_tableView;
+
+@synthesize tweets=_tweets;
 @synthesize accountStore=_accountStore;
 @synthesize accounts=_accounts;
 @synthesize account=_account;
@@ -43,6 +49,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Holds the tweet list
+    self.tweets = [NSMutableArray array];
+    
+    // Hide empty seperators
+    self.tableView.tableHeaderView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
+    self.tableView.tableFooterView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
     
     // Get access to their accounts
     self.accountStore = [[[ACAccountStore alloc] init] autorelease];
@@ -154,7 +167,16 @@
 #pragma mark - TSStreamDelegate
 
 - (void)streamDidReceiveMessage:(TSStream*)stream json:(id)json {
-    NSLog(@"%@", json);
+    [TSModelParser parseJson:json
+                     friends:^(TSFriendsList *model) {
+                         NSLog(@"Got friends list");
+                     } tweet:^(TSTweet *model) {
+                         // Got a new tweet!
+                         [self.tweets insertObject:model atIndex:0];
+                         [self.tableView reloadData];
+                     } unsupported:^(id json) {
+                         NSLog(@"Unsupported : %@", json); 
+                     }];
 }
 
 - (void)streamDidReceiveInvalidJson:(TSStream*)stream message:(NSString*)message {
@@ -170,6 +192,48 @@
     
     // Hack to just restart it, you'll want to handle this nicer :)
     [self.stream performSelector:@selector(start) withObject:nil afterDelay:10];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.tweets.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString* const kCellIdentifier = @"Cell";
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
+    if (!cell) {
+        // Subtitle cell, with a bit of a tweak
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kCellIdentifier] autorelease];
+        cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+        cell.detailTextLabel.numberOfLines = 0;
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:15];
+    }
+    
+    if (indexPath.row < self.tweets.count) {
+        // Format the tweet
+        TSTweet* tweet = [self.tweets objectAtIndex:indexPath.row];
+        cell.textLabel.text = [@"@" stringByAppendingString:tweet.user.screenName];
+        cell.detailTextLabel.text = tweet.text;
+    }
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row < self.tweets.count) {
+        // Calculate how much room we need for the tweet
+        TSTweet* tweet = [self.tweets objectAtIndex:indexPath.row];
+        return [tweet.text sizeWithFont:[UIFont systemFontOfSize:15]
+                      constrainedToSize:CGSizeMake(tableView.bounds.size.width - 20, INT_MAX)
+                          lineBreakMode:UILineBreakModeCharacterWrap].height + 40;
+    }
+    return 0;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

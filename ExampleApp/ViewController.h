@@ -12,4 +12,6 @@
 
 @interface ViewController : UIViewController<UIActionSheetDelegate, TSStreamDelegate>
 
+@property (nonatomic, assign) IBOutlet UITableView* tableView;
+
 @end

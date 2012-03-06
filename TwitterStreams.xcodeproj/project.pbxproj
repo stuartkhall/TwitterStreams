@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E06A081215063DD800981F07 /* TSFriendsList.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A080D15063DD800981F07 /* TSFriendsList.m */; };
+		E06A081315063DD800981F07 /* TSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A080F15063DD800981F07 /* TSModel.m */; };
+		E06A081415063DD800981F07 /* TSModelParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A081115063DD800981F07 /* TSModelParser.m */; };
+		E06A08171506402A00981F07 /* TSTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A08161506402A00981F07 /* TSTweet.m */; };
+		E06A081A1506438A00981F07 /* TSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A08191506438900981F07 /* TSUser.m */; };
 		E07C43371505BB3F006279FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C43361505BB3F006279FA /* UIKit.framework */; };
 		E07C43391505BB3F006279FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C43381505BB3F006279FA /* Foundation.framework */; };
 		E07C433B1505BB3F006279FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C433A1505BB3F006279FA /* CoreGraphics.framework */; };
@@ -25,6 +30,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E06A080C15063DD800981F07 /* TSFriendsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSFriendsList.h; sourceTree = "<group>"; };
+		E06A080D15063DD800981F07 /* TSFriendsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSFriendsList.m; sourceTree = "<group>"; };
+		E06A080E15063DD800981F07 /* TSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSModel.h; sourceTree = "<group>"; };
+		E06A080F15063DD800981F07 /* TSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSModel.m; sourceTree = "<group>"; };
+		E06A081015063DD800981F07 /* TSModelParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSModelParser.h; sourceTree = "<group>"; };
+		E06A081115063DD800981F07 /* TSModelParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSModelParser.m; sourceTree = "<group>"; };
+		E06A08151506402A00981F07 /* TSTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTweet.h; sourceTree = "<group>"; };
+		E06A08161506402A00981F07 /* TSTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTweet.m; sourceTree = "<group>"; };
+		E06A08181506438900981F07 /* TSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUser.h; sourceTree = "<group>"; };
+		E06A08191506438900981F07 /* TSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUser.m; sourceTree = "<group>"; };
 		E07C43321505BB3F006279FA /* TwitterStreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterStreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07C43361505BB3F006279FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E07C43381505BB3F006279FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +82,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E06A080B15063DD800981F07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E06A081015063DD800981F07 /* TSModelParser.h */,
+				E06A081115063DD800981F07 /* TSModelParser.m */,
+				E06A080E15063DD800981F07 /* TSModel.h */,
+				E06A080F15063DD800981F07 /* TSModel.m */,
+				E06A080C15063DD800981F07 /* TSFriendsList.h */,
+				E06A080D15063DD800981F07 /* TSFriendsList.m */,
+				E06A08151506402A00981F07 /* TSTweet.h */,
+				E06A08161506402A00981F07 /* TSTweet.m */,
+				E06A08181506438900981F07 /* TSUser.h */,
+				E06A08191506438900981F07 /* TSUser.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E07C43271505BB3F006279FA = {
 			isa = PBXGroup;
 			children = (
@@ -118,17 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				E07C436F1505BE99006279FA /* Dependencies */,
-				E07C43661505BBD9006279FA /* Models */,
+				E06A080B15063DD800981F07 /* Models */,
 				E07C43671505BBD9006279FA /* Streams */,
 			);
 			path = TwitterStreams;
-			sourceTree = "<group>";
-		};
-		E07C43661505BBD9006279FA /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E07C43671505BBD9006279FA /* Streams */ = {
@@ -232,6 +257,11 @@
 				E07C43761505BF2C006279FA /* JSONKit.m in Sources */,
 				E07C437A1505BFA9006279FA /* TSUserStream.m in Sources */,
 				E07C43811505DA4F006279FA /* TSFilterStream.m in Sources */,
+				E06A081215063DD800981F07 /* TSFriendsList.m in Sources */,
+				E06A081315063DD800981F07 /* TSModel.m in Sources */,
+				E06A081415063DD800981F07 /* TSModelParser.m in Sources */,
+				E06A08171506402A00981F07 /* TSTweet.m in Sources */,
+				E06A081A1506438A00981F07 /* TSUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +371,7 @@
 				E07C43521505BB3F006279FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
