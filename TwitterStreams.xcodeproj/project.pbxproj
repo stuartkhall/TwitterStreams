@@ -14,6 +14,9 @@
 		E06A081A1506438A00981F07 /* TSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A08191506438900981F07 /* TSUser.m */; };
 		E06A081D15065E9E00981F07 /* TSFollow.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A081C15065E9D00981F07 /* TSFollow.m */; };
 		E06A08201506614B00981F07 /* TSFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A081F1506614A00981F07 /* TSFavorite.m */; };
+		E06A08231506FD3100981F07 /* TSUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A08221506FD3100981F07 /* TSUrl.m */; };
+		E06A08261506FE7200981F07 /* TSHashtag.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A08251506FE7100981F07 /* TSHashtag.m */; };
+		E06A082A150700F600981F07 /* NSArray+Enumerable.m in Sources */ = {isa = PBXBuildFile; fileRef = E06A0829150700F600981F07 /* NSArray+Enumerable.m */; };
 		E07C43371505BB3F006279FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C43361505BB3F006279FA /* UIKit.framework */; };
 		E07C43391505BB3F006279FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C43381505BB3F006279FA /* Foundation.framework */; };
 		E07C433B1505BB3F006279FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07C433A1505BB3F006279FA /* CoreGraphics.framework */; };
@@ -46,6 +49,12 @@
 		E06A081C15065E9D00981F07 /* TSFollow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSFollow.m; sourceTree = "<group>"; };
 		E06A081E1506614A00981F07 /* TSFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSFavorite.h; sourceTree = "<group>"; };
 		E06A081F1506614A00981F07 /* TSFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSFavorite.m; sourceTree = "<group>"; };
+		E06A08211506FD3100981F07 /* TSUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUrl.h; sourceTree = "<group>"; };
+		E06A08221506FD3100981F07 /* TSUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUrl.m; sourceTree = "<group>"; };
+		E06A08241506FE7100981F07 /* TSHashtag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHashtag.h; sourceTree = "<group>"; };
+		E06A08251506FE7100981F07 /* TSHashtag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHashtag.m; sourceTree = "<group>"; };
+		E06A0828150700F600981F07 /* NSArray+Enumerable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Enumerable.h"; sourceTree = "<group>"; };
+		E06A0829150700F600981F07 /* NSArray+Enumerable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Enumerable.m"; sourceTree = "<group>"; };
 		E07C43321505BB3F006279FA /* TwitterStreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterStreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07C43361505BB3F006279FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E07C43381505BB3F006279FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,8 +114,21 @@
 				E06A081C15065E9D00981F07 /* TSFollow.m */,
 				E06A081E1506614A00981F07 /* TSFavorite.h */,
 				E06A081F1506614A00981F07 /* TSFavorite.m */,
+				E06A08211506FD3100981F07 /* TSUrl.h */,
+				E06A08221506FD3100981F07 /* TSUrl.m */,
+				E06A08241506FE7100981F07 /* TSHashtag.h */,
+				E06A08251506FE7100981F07 /* TSHashtag.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E06A0827150700E400981F07 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E06A0828150700F600981F07 /* NSArray+Enumerable.h */,
+				E06A0829150700F600981F07 /* NSArray+Enumerable.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E07C43271505BB3F006279FA = {
@@ -162,6 +184,7 @@
 				E07C436F1505BE99006279FA /* Dependencies */,
 				E06A080B15063DD800981F07 /* Models */,
 				E07C43671505BBD9006279FA /* Streams */,
+				E06A0827150700E400981F07 /* Utils */,
 			);
 			path = TwitterStreams;
 			sourceTree = "<group>";
@@ -274,6 +297,9 @@
 				E06A081A1506438A00981F07 /* TSUser.m in Sources */,
 				E06A081D15065E9E00981F07 /* TSFollow.m in Sources */,
 				E06A08201506614B00981F07 /* TSFavorite.m in Sources */,
+				E06A08231506FD3100981F07 /* TSUrl.m in Sources */,
+				E06A08261506FE7200981F07 /* TSHashtag.m in Sources */,
+				E06A082A150700F600981F07 /* NSArray+Enumerable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
