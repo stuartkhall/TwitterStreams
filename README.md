@@ -19,4 +19,4 @@ Expect bugs and leaks :)
 
 ## License
 
-TwitterStreams is released under the MIT License (see the [license file](https://github.com/stuartkhall/twitter_streams/blob/master/LICENSE)) and is copyright Stuart Hall, 2012.
+TwitterStreams is released under the MIT License (see the [license file](https://github.com/stuartkhall/twitter_streams/blob/master/license)) and is copyright Stuart Hall, 2012.
