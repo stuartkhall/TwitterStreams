@@ -3,7 +3,7 @@
 //  TwitterStreams
 //
 //  Created by Stuart Hall on 6/03/12.
-//  Copyright (c) 2012 Filter Squad. All rights reserved.
+//  Copyright (c) 2012 Stuart Hall. All rights reserved.
 //
 
 #import "TSTweet.h"
